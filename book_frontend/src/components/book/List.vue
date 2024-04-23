@@ -1,6 +1,6 @@
 <template>
-    <table class="table">
-      <thead>
+    <table class="table table-bordered table-striped">
+      <thead class="table-primary">
         <tr>
           <th scope="col">Tên sách</th>
           <th scope="col">Đơn giá</th>
@@ -15,7 +15,7 @@
         <tr v-for="(book, index) in Books" :key="book._id"
             :class="{ active: index === activeIndex }" >
           <td>{{ book.TENSACH }}</td>
-          <td>{{ book.DONGIA }}</td>
+          <td><span class="text-danger">{{ formatCurrency(book.DONGIA) }}</span></td>
           <td>{{ book.SOQUYEN }}</td>
           <td>{{ book.NAMXUATBAN }}</td>
           <td>{{ book.TenNxb }}</td>
@@ -76,6 +76,12 @@ export default {
       return { editbook,  };
     },
     methods: {
+
+      formatCurrency(amount) {
+            // Định dạng số tiền thành dạng tiền tệ
+            return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
+      },
+
       deletebook(id) {
           
             this.$emit("deletebook",id);

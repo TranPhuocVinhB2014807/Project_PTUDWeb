@@ -10,8 +10,8 @@
             </li>
             <li class="nav-item">
                 <router-link :to="{ name: 'muonsach.user' }" class="nav-link text-light">
-                    Mượn sách
-                    <i class="fas fa-address-book"></i>
+                    Theo dõi mượn sách
+                    <i class="fa-solid fa-eye"></i>
                 </router-link>
             </li>
         </div>

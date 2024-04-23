@@ -2,7 +2,7 @@
 
 
     <div class="row justify-content-center">
-        <div class="card col-sm-4 col-lg-5 m-2 bg-light" v-for="(book, index) in Books" :key="book._id"
+        <div class="card border-success col-sm-4 col-lg-5 m-2 bg-light" v-for="(book, index) in Books" :key="book._id"
             :class="{ active: index === activeIndex }">
             <div>
                 <div class="card-body m-2">
@@ -13,11 +13,11 @@
                         <p class="col-6">Số quyển: {{ book.SOQUYEN }} </p>
                         <p class="col-6">Năm xuất bản: {{ book.NAMXUATBAN }} </p>
                         <p class="col-6">Nhà xuất bản: {{ book.TenNxb }} </p>
-                        <p class="col-6">Đơn giá: {{ book.DONGIA }} </p>
+                        <p class="col-6">Đơn giá: <span class="text-danger">{{ formatCurrency(book.DONGIA) }} </span></p>
 
                     </div>
                     <hr>
-                    <a href="#" class="btn btn-danger" @click="muonSach(book._id)">Mượn sách</a>
+                    <a href="#" class="btn btn-info" @click="muonSach(book._id)">Mượn sách</a>
 
                 </div>
             </div>
@@ -74,6 +74,10 @@ export default {
         return { editbook, };
     },
     methods: {
+        formatCurrency(amount) {
+            // Định dạng số tiền thành dạng tiền tệ
+            return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
+        },
         async muonSach(bookId) {
             const router = useRouter();
 

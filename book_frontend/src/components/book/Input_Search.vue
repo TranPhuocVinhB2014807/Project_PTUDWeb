@@ -3,7 +3,7 @@
         <input type="text" class="form-control" placeholder="Nhập thông tin cần tìm" :value="modelValue"
             @input="updateModelValue" @keyup.enter="submitOnEnter" />
         <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" @click="submit">
+            <button class="btn btn-outline-primary" type="button" @click="submit">
                 <i class="fas fa-search"></i> Tìm kiếm
             </button>
         </div>

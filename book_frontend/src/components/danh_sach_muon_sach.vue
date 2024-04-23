@@ -1,6 +1,6 @@
 <template>
-    <table class="table">
-        <thead>
+    <table class="table table-bordered table-striped">
+        <thead class="table-primary">
             <tr>
                 <th scope="col">Tên sách</th>
                 <th scope="col">Tên đọc giả</th>

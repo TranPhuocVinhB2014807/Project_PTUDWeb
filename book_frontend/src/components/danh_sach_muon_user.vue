@@ -1,10 +1,10 @@
 <template>
-    <table class="table">
-        <thead>
+    <table class="table table-bordered table-striped">
+        <thead class="table-primary">
             <tr>
                 <th scope="col">Tên sách</th>
                 <th scope="col">Tên đọc giả</th>
-                <th scope="col">Ngay mượn</th>
+                <th scope="col">Ngày mượn</th>
                 <th scope="col">Ngày trả</th>
                 <th scope="col">Trạng thái</th>
             </tr>
