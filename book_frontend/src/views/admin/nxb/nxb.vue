@@ -2,7 +2,7 @@
     <div class="page row">
 
         <div class="mt-3 col-md-12">
-            <h3 class="text-center my-3 text-primary">
+            <h3 class="text-center my-3">
                 Nhà xuất bản
 
             </h3>

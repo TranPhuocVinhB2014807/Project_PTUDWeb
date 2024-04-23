@@ -17,9 +17,9 @@
               name:'editNxb',
               params:{id:nxb._id},
             }">
-              <button class="mx-1 btn-sm btn-warning"> sửa</button>
+              <button class="mx-1 btn-sm btn-primary"><i class="fa-solid fa-pen-to-square"></i></button>
             </router-link>
-            <button class="btn btn-sm btn-danger" @click="deleteNxb(nxb._id)">Xóa</button>
+            <button class="btn btn-sm btn-danger" @click="deleteNxb(nxb._id)"><i class="fa-solid fa-trash"></i></button>
           </td>
         </tr>
       </tbody>

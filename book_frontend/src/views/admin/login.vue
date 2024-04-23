@@ -5,10 +5,10 @@
     <div class="px-4 py-5 px-md-5 text-center text-lg-start">
       <div class="container">
         <div class="row gx-lg-5 align-items-center justify-content-center">
-          <div class="col-lg-12 mb-5 mb-lg-0">
-            <h3 class="my-5 display-3 fw-bold ls-tight">
+          <div class="col-lg-12 mb-2 mb-lg-0">
+            <h1 class="my-4  fw-bold ls-tight">
               <span>Trang quản trị</span>
-            </h3>
+            </h1>
 
           </div>
 

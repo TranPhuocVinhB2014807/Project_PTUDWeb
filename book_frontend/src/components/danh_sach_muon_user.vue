@@ -18,14 +18,14 @@
                 <td>{{ muonsach.NGAYTRA }}</td>
                 <td>
                     <template v-if="muonsach.TRANGTHAI === 0">
-                        Đang chờ duyệt
-                        <button @click="HuyMuon(muonsach._id)" class="btn btn-danger">Hủy mượn</button>
+                        <span class="badge rounded-pill bg-warning text-dark">Đang chờ duyệt</span>
+                        <button @click="HuyMuon(muonsach._id)" class="btn btn-danger mx-3">Hủy mượn</button>
                     </template>
                     <template v-else-if="muonsach.TRANGTHAI === 1 && !muonsach.NGAYTRA">
-                        Đang mượn
+                       <span class="badge rounded-pill bg-info text-light">Đang mượn</span> 
                     </template>
                     <template v-else>
-                        Đã trả sách
+                        <span class="badge rounded-pill bg-secondary text-light">Đã trả sách</span>
                     </template>
                 </td>
             </tr>

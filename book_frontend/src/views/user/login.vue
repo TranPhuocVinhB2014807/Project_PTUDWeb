@@ -1,9 +1,8 @@
 <template>
-    <div class="row">
-        <div class="col-sm-4"> </div>
-
-        <form class="col-sm-4" @submit.prevent="login">
-            <h4 class="text-center my-2 text-primary   "> Đăng nhập </h4>
+    <div class="row justify-content-center">
+        <div class="card col-sm-4 p-5 bg-light">
+            <form  @submit.prevent="login">
+            <h4 class="text-center my-2"> Đăng nhập </h4>
             <div data-mdb-input-init class="form-outline mb-4">
                 <input type="text" id="form2Example1" class="form-control" placeholder="Tên người dùng" v-model="docgia.username" />
                 
@@ -16,14 +15,15 @@
             </div>
 
 
-            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-primary btn-block mb-4">Đăng
+            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Đăng
                 nhập</button>
 
 
-
+        <p v-if="error">{{ error }}</p>       
         </form>
-        <p v-if="error">{{ error }}</p>
-        <div class="col-sm-4"> </div>
+        </div>
+       
+        
     </div>
 </template>
 <script>

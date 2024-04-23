@@ -4,7 +4,7 @@
             <tr>
                 <th scope="col">Tên sách</th>
                 <th scope="col">Tên đọc giả</th>
-                <th scope="col">Ngay mượn</th>
+                <th scope="col">Ngày mượn</th>
                 <th scope="col">Ngày trả</th>
                 <th scope="col">Hành động</th>
             </tr>
@@ -21,11 +21,11 @@
                         <button @click="Duyetmuon(muonsach._id)" class="btn btn-success">Duyệt</button>
                     </template>
                     <template v-else-if="muonsach.TRANGTHAI === 1 && muonsach.NGAYTRA == null">
-                        Đang mượn
-                        <button @click="TraSach(muonsach._id)" class="btn btn-primary">Trả sách</button>
+                        <span class="badge rounded-pill bg-info text-light">Đang mượn</span> 
+                        <button @click="TraSach(muonsach._id)" class="btn btn-primary mx-3">Trả sách</button>
                     </template>
                     <template v-else>
-                        <p>Đã trả sách</p>
+                        <span class="badge rounded-pill bg-secondary text-light">Đã trả sách</span>
                     </template>
                 </td>
             </tr>
